@@ -33,7 +33,7 @@ void Task1()
 		std::cin >> d;
 	}
 
-	std::cout << a * (b + (c / d)) << std::endl << std::endl;
+	std::cout << "Result is: " << a * (b + (c / d)) << std::endl << std::endl;
 
 }
 
