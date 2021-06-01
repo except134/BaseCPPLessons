@@ -33,7 +33,9 @@ void Task1()
 		std::cin >> d;
 	}
 
-	std::cout << "Result is: " << a * (b + (c / d)) << std::endl << std::endl;
+	float result = static_cast<float>(a * (b + (c / d)));
+
+	std::cout << "Result is: " << result << std::endl << std::endl;
 
 }
 
