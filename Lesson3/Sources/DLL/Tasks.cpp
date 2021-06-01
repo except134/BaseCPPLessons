@@ -33,7 +33,7 @@ void Task1()
 		std::cin >> d;
 	}
 
-	float result = static_cast<float>(a * (b + (c / d)));
+	float result = a * (b + (static_cast<float>(c) / d));
 
 	std::cout << "Result is: " << result << std::endl << std::endl;
 
