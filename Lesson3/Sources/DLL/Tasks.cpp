@@ -57,9 +57,20 @@ void Task3()
 
 	int myArray[3][3][3]{};
 	int* ptrArray = &myArray[0][0][0];
-	*(ptrArray + sizeof(int)*3+1) = 1;
+	ptrArray += sizeof(int) * 3 + 1;
+	*ptrArray = 1;
 
-	std::cout << "Result is: " << myArray[1][1][1] << std::endl << std::endl;
+	std::cout << "Result is: " << *ptrArray << std::endl << std::endl;
+
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 3; j++) {
+			for (int k = 0; k < 3; k++) {
+				std::cout << myArray[i][j][k];
+			}
+			std::cout << std::endl;
+		}
+		std::cout << std::endl << std::endl;
+	}
 
 
 }
