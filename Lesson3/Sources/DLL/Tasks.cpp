@@ -17,6 +17,10 @@ int b{};
 int c{};
 int d{};
 
+int* aaa = nullptr;
+int* ccc = &aaa;
+
+
 void Task1()
 {
 	std::cout << "=================== Task 1 ===================" << std::endl;

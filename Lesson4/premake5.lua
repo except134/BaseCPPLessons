@@ -44,7 +44,7 @@ project "Lesson4"
     targetdir "Bin"
     debugdir "$(TargetDir)"
     targetname "$(ProjectName)$(PlatformArchitecture)$(Configuration)"
-    kind "WindowedApp"
+    kind "ConsoleApp"
     pchheader("Lesson4PCH.h") 
     pchsource("Sources/Lesson4PCH.cpp") 
     links {   }
