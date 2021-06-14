@@ -8,7 +8,7 @@ solution ("Lesson5")
     platforms { "x64" }
     cppdialect("C++latest")
     language "C++"
-    startproject("Lesson3")
+    startproject("Lesson5")
 
     filter "configurations:Debug"
         optimize "Off"

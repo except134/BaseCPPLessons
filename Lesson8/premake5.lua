@@ -2,13 +2,13 @@ COMPUTER_NAME       = os.getenv("COMPUTERNAME")
 LOCATION_DIR        = "Build/" ..  COMPUTER_NAME .. "/" .. _ACTION
 
 -- Solution
-solution ("Lesson6")
+solution ("Lesson8")
     location(LOCATION_DIR)
     configurations { "Release", "Debug" }
     platforms { "x64" }
     cppdialect("C++latest")
     language "C++"
-    startproject("Lesson6")
+    startproject("Lesson8")
 
     filter "configurations:Debug"
         optimize "Off"
@@ -40,22 +40,23 @@ solution ("Lesson6")
              
         }
 
-project "Lesson6"
+project "Lesson8"
     targetdir "Bin"
     debugdir "$(TargetDir)"
     targetname "$(ProjectName)$(PlatformArchitecture)$(Configuration)"
-    kind "ConsoleApp"
-    pchheader("Lesson6PCH.h") 
-    pchsource("Sources/Lesson6PCH.cpp") 
+    kind "WindowedApp"
+    pchheader("Lesson8PCH.h") 
+    pchsource("Sources/Lesson8PCH.cpp") 
     links {   }
     defines {  }
     files { 
-        "Sources/Lesson6PCH.cpp",
-        "Sources/Lesson6PCH.h",
+        "Sources/Lesson8PCH.cpp",
+        "Sources/Lesson8PCH.h",
         "Sources/**.h", 
         "Sources/**.c", 
         "Sources/**.hpp", 
         "Sources/**.cpp", 
         "Sources/**.inl", 
+        "Sources/**.rc", 
     }
 
