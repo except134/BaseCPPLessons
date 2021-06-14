@@ -8,4 +8,7 @@ public:
 	void Task3();
 	void Task4();
 	void Task5();
+
+private:
+	bool IsNumerPrime(int n);
 };
