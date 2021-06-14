@@ -7,7 +7,7 @@ public:
 	void Task2();
 	void Task3();
 	void Task4();
-	void Task5();
+	void Task5(const std::string& argv);
 
 private:
 	void Tasks3CreateFile1(const std::string& fname);

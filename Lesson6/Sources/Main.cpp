@@ -11,17 +11,17 @@
 5. Написать программу, которая проверяет присутствует ли указанное пользователем при запуске программы слово в указанном пользователем файле (для простоты работаем только с латиницей).
 */
 
-int main()
+int main(int argc, char* argv[])
 {
 	setlocale(LC_ALL, "");
 
 	Tasks tasks;
 
-	tasks.Task1();
-	tasks.Task2();
-	tasks.Task3();	
-	tasks.Task4();
-	tasks.Task5();
+//	tasks.Task1();
+//	tasks.Task2();
+//	tasks.Task3();	
+//	tasks.Task4();
+	tasks.Task5(argc > 1 ? argv[1] : "");
 
 	return 0;
 }

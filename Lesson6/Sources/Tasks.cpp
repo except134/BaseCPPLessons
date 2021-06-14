@@ -182,9 +182,38 @@ void Tasks::Task4()
 
 // 5. Написать программу, которая проверяет присутствует ли указанное пользователем при запуске программы слово в указанном пользователем файле(для простоты работаем только с латиницей).
 
-void Tasks::Task5()
+void Tasks::Task5(const std::string& argv)
 {
 	std::cout << "=================== Задача 5 ===================" << std::endl << std::endl;
+
+	std::string searchStr = argv;
+
+	if (searchStr.empty()) {
+		std::cout << "Введите искомое слово: ";
+		std::cin >> searchStr;
+	}
+
+	std::string searchFile{};
+	std::cout << "Введите имя файла, в котором будет осуществляться поиск: ";
+	std::cin >> searchFile;
+
+	std::fstream file(searchFile);
+
+	std::string nextToken;
+	bool result = false;
+	while (file >> nextToken) {
+		if (nextToken == searchStr) {
+			result = true;
+			break;
+		}
+	}
+
+	std::cout << "Слово " << searchStr << " в файле " << searchFile;
+	
+	if(result)
+		std::cout << " найдено" << std::endl;
+	else
+		std::cout << " не найдено" << std::endl;
 
 
 	std::cout << std::endl << std::endl;
